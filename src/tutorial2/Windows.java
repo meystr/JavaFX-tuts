@@ -7,6 +7,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -41,12 +42,17 @@ public class Windows extends Application {
         );
         animation.setCycleCount(Animation.INDEFINITE);
         animation.play();
-
-        primaryStage.setScene(new Scene(new Group(imageView)));
+        Group root = new Group();
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        scene.setFill(Color.GREEN);
+        root.getChildren().add(imageView);
+        // primaryStage.setScene(new Scene(new Group(imageView)));
         imageView.setX(300);
         imageView.setY(500);
         primaryStage.setMinWidth(1200);
         primaryStage.setMinHeight(800);
+
         primaryStage.show();
     }
 }
