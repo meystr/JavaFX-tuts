@@ -20,7 +20,7 @@ public class Windows extends Application {
     private static final int COUNT    =  3;
     private static final int OFFSET_X =  87;
     private static final int OFFSET_Y =  3;
-    private static final int WIDTH    = 67;
+    private static final int WIDTH    = 63;
     private static final int HEIGHT   = 88;
 
     public static void main(String[] args) {
@@ -47,11 +47,10 @@ public class Windows extends Application {
         primaryStage.setScene(scene);
         scene.setFill(Color.GREEN);
         root.getChildren().add(imageView);
-        // primaryStage.setScene(new Scene(new Group(imageView)));
-        imageView.setX(300);
-        imageView.setY(500);
-        primaryStage.setMinWidth(1200);
-        primaryStage.setMinHeight(800);
+        imageView.setX(15);
+        imageView.setY(400);
+        primaryStage.setMinWidth(800);
+        primaryStage.setMinHeight(600);
 
         primaryStage.show();
     }
