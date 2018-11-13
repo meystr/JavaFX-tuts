@@ -11,24 +11,25 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+
 public class Windows extends Application {
 
 
-    private static final Image IMAGE = new Image("tutorial2/Astyanax.gif");
+    private static final Image IMAGE = new Image("tutorial2/Marco.png");
 
-    private static final int COLUMNS  =   3;
-    private static final int COUNT    =  3;
-    private static final int OFFSET_X =  87;
-    private static final int OFFSET_Y =  3;
-    private static final int WIDTH    = 63;
-    private static final int HEIGHT   = 88;
+    private static final int COLUMNS = 5;
+    private static final int COUNT = 4;
+    private static final int OFFSET_X = 6;
+    private static final int OFFSET_Y = 0;
+    private static final int WIDTH = 36;
+    private static final int HEIGHT = 100;
 
     public static void main(String[] args) {
         launch(args);
     }
 
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("The Horse in Motion");
+        primaryStage.setTitle("app");
 
         final ImageView imageView = new ImageView(IMAGE);
         imageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT));
@@ -40,12 +41,13 @@ public class Windows extends Application {
                 OFFSET_X, OFFSET_Y,
                 WIDTH, HEIGHT
         );
+
         animation.setCycleCount(Animation.INDEFINITE);
         animation.play();
         Group root = new Group();
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
-        scene.setFill(Color.GREEN);
+        scene.setFill(Color.WHITE);
         root.getChildren().add(imageView);
         imageView.setX(15);
         imageView.setY(400);
