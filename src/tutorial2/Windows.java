@@ -28,7 +28,7 @@ public class Windows extends Application {
     }
 
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("The Horse in Motion");
+        primaryStage.setTitle("App");
 
         final ImageView imageView = new ImageView(IMAGE);
         imageView.setViewport(new Rectangle2D(OFFSET_X, OFFSET_Y, WIDTH, HEIGHT));
